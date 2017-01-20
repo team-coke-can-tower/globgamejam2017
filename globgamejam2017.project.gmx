@@ -5,9 +5,36 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="sonar">
+      <sprite>sprites\spr_sonar_player</sprite>
+      <sprite>sprites\spr_sonar_sweep</sprite>
+      <sprite>sprites\spr_enemy_sub</sprite>
+      <sprite>sprites\spr_sonar_torpedo</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_control</object>
+    <object>objects\obj_sound_man</object>
+    <objects name="interior">
+      <object>objects\obj_player</object>
+      <object>objects\obj_submarine</object>
+    </objects>
+    <objects name="sonar">
+      <object>objects\obj_sonar_enemygen</object>
+      <object>objects\obj_sonar_player</object>
+      <object>objects\obj_enemy_sub</object>
+      <object>objects\obj_sonar_torpedo</object>
+      <object>objects\obj_sonar_sweep</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_init</room>
+    <room>rooms\rm_interior</room>
+    <room>rooms\rm_sonar</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
