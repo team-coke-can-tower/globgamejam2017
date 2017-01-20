@@ -1,0 +1,5 @@
+*.wav
+
+# Remove Config files
+Configs/Default/*
+!Configs/Default/windows
