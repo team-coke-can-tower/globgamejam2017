@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>/// Initialize variables
 
+image_alpha = 0;
+
 from_player = true;
 target_x = 0;
 target_y = 0;
@@ -142,34 +144,6 @@ if(not fading) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_sonar_player">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// If from enemy, hit
-
-if(not from_player) {
-    instance_destroy();
-    // TODO
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_enemy_sub">
       <action>
         <libid>1</libid>
@@ -192,6 +166,34 @@ if(not from_player) {
 if(from_player) {
     other.hp -= 1;
     instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sonar_player">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// If from enemy, hit
+
+if(not from_player) {
+    instance_destroy();
+    // TODO
 }
 </string>
           </argument>
