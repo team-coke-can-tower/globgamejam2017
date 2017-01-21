@@ -28,6 +28,7 @@
             <string>/// Initialize variables
 
 player = instance_find(obj_sonar_player, 0);
+son_ctrl = instance_find(obj_sonar_control, 0);
 
 image_alpha = 0;
 alpha_change_speed = 0.05;
@@ -111,9 +112,65 @@ if(fading) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Manage AI state
+            <string>/// Manage AI state and appropriate action
 
+dist_to_player = point_distance(player.x, player.y, x, y);
 
+if(ai_state == "idle") {
+    // if near and hit with sonar ping
+    if((dist_to_player &lt; 200) and fading) {
+        ai_state = "alert";
+    // if nearer and engine on
+    } else if((dist_to_player &lt; 150) and son_ctrl.engine_on) {
+        ai_state = "alert";
+    }
+} else if(ai_state == "alert") {
+    // start waiting
+    vspd = 0;
+    hspd = 0;
+    var has_seen = false;
+    if((dist_to_player &lt; 150) and fading) {
+        has_seen = true;
+    } else if((dist_to_player &lt; 100) and son_ctrl.engine_on) {
+        has_seen = true;
+    }
+    if(has_seen) {
+        // random chance of waiting, running, or fighting
+        choice = random(1);
+        if(choice &lt; 0.4) {
+            ai_state = "seen-wait";
+        } else if(choice &lt; 0.6) {
+            ai_state = "seen-run";
+        } else {
+            ai_state = "seen-fight";
+        }
+    }
+} else if(ai_state == "seen-wait"){
+    hspd = 0;
+    vspd = 0;
+    if(alarm[0] == 0) {
+        ai_state = "seen-run";
+    } else {
+        alarm[0] = random_range(300, 600);
+    }
+} else if(ai_state == "seen-run") {
+    vspd = 2;
+    if(player.x &lt; x) {
+        hspd = 1;
+    } else {
+        hspd = -1;
+    }
+} else if(ai_state == "seen-fight") {
+    hspd = 0;
+    vspd = 0;
+    if(alarm[0] &lt;= 0) {
+        alarm[0] = random_range(60, 240);
+        torpedo = instance_create(x, y, obj_sonar_torpedo);
+        torpedo.from_player = false;
+        torpedo.target_x = player.x;
+        torpedo.target_y = player.y;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -166,6 +223,9 @@ if(room == rm_interior) {
 if((step_count % 8) == 0) {
     x += hspd;
     y += vspd;
+    if(son_ctrl.engine_on) {
+        y += 2;
+    }
 }
 step_count++;
 </string>
