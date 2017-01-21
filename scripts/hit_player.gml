@@ -5,24 +5,15 @@
 randomize();
 
 // can hit same room twice even if still broken
-switch(random_range(0, 3)) {
-    case 0:
-        obj_control.engine_room_hit = true;
-        break;
-    case 1:
-        obj_control.control_room_hit = true;
-        // if in sonar, evacuate room
-        if(room == rm_sonar) {
-            room_goto(rm_interior);
-        }
-        break;
-    case 2:
-        obj_control.living_quarters_hit = true;
-        break;
-    case 3:
-        obj_control.weapon_room_hit = true;
-        break;
-}
-// Hits a random room
+var room_hit = 0//random_range(0, 3);
+obj_control.room_hit[room_hit] = true;
 
-place_fires()
+if(room_hit == obj_control.control_room && room == rm_sonar){
+    room_goto(rm_interior)
+}
+
+audio_play_sound(room_sound[room_hit], 1, true)
+
+obj_control.room_inst[room_hit].hitsquare_active = true;
+
+place_fires(room_hit)

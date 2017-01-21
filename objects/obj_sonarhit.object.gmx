@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>action_text = "Press X to enter sonar mode"
 hitsquare_active = true
+event_inherited();
 </string>
           </argument>
         </arguments>

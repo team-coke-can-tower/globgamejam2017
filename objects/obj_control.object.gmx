@@ -30,10 +30,58 @@ engine_on = true;
 torpedoes = 5;
 
 // whether different rooms hit or not
-engine_room_hit = false;
-control_room_hit = false;
-living_quarters_hit = false;
-weapon_room_hit = false;
+engine_room = 0;
+control_room = 1;
+living_quarters = 2;
+weapon_room = 3;
+
+
+// define a local variable room_inst to be the instances of the rooms collision position
+// this is defined in the creation code of the individual instances of rooms 
+
+room_hit[0] = false
+room_hit[1] = false
+room_hit[2] = false
+room_hit[3] = false
+
+room_sound[engine_room] = snd_engine_rm_alarm;
+room_sound[control_room] = snd_control_rm_alarm;
+room_sound[living_quarters] = -1;
+room_sound[weapon_room] = snd_wepons_rm_alarm;
+
+room_sound_inst[0] = -1
+room_sound_inst[1] = -1
+room_sound_inst[2] = -1
+room_sound_inst[3] = -1
+
+room_fires[0] = ds_list_create()
+room_fires[1] = ds_list_create()
+room_fires[2] = ds_list_create()
+room_fires[3] = ds_list_create()
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hit_player()
 </string>
           </argument>
         </arguments>

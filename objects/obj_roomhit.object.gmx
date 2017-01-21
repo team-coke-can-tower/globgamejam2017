@@ -25,8 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>action_text = "Press and hold X to heal room"
-hitsquare_active = true
+            <string>// room_type defined in instance creation code
+
+initial_text = "Press and hold X to heal room"
+action_text = initial_text
+hitsquare_active = false
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -49,9 +53,9 @@ hitsquare_active = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message("Fixed room")
+            <string>hitsquare_active = false
 
-hitsquare_active = false
+put_out_fires(room_type)
 </string>
           </argument>
         </arguments>
@@ -74,8 +78,10 @@ hitsquare_active = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 30
-action_text = "Hold X to heal"
+            <string>if(hitsquare_active){
+    alarm[0] = 30
+    action_text = "Hold X to heal"
+}
 </string>
           </argument>
         </arguments>
@@ -99,8 +105,7 @@ action_text = "Hold X to heal"
           <argument>
             <kind>1</kind>
             <string>alarm[0] = -1
-
-hitsquare_active = false
+action_text = initial_text
 </string>
           </argument>
         </arguments>

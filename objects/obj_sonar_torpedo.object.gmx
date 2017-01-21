@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-10</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_sonar_entity</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,6 +28,8 @@
             <string>/// Initialize variables
 
 image_alpha = 0;
+
+son_ctrl = instance_find(obj_sonar_control, 0);
 
 from_player = true;
 target_x = 0;
@@ -65,7 +67,7 @@ alpha_change_speed = 0.1;
 s_emit = audio_emitter_create();
 audio_falloff_set_model(audio_falloff_exponent_distance);
 audio_emitter_falloff(s_emit, 100, 300, 1);
-audio_play_sound_on(s_emit, snd_torpedo, true, 0);
+torp_snd = audio_play_sound_on(s_emit, snd_torpedo, true, 1);
 audio_emitter_position(s_emit, x, y, 0);
 
 </string>
@@ -92,7 +94,7 @@ audio_emitter_position(s_emit, x, y, 0);
             <kind>1</kind>
             <string>/// Stop sound
 
-audio_stop_sound(snd_torpedo);
+audio_stop_sound(torp_snd);
 audio_emitter_free(s_emit);
 </string>
           </argument>
@@ -189,6 +191,40 @@ if(fading) {
             <string>/// Update sound emitter
 
 audio_emitter_position(s_emit, x, y, 0);
+
+if((room == rm_sonar) and (not son_ctrl.sonar_on)) {
+    audio_emitter_gain(s_emit, 1);
+} else {
+    audio_emitter_gain(s_emit, 0);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy_sub">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// If from player, hit
+
+if(from_player) {
+    other.hp -= 1;
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -264,35 +300,8 @@ audio_play_sound(snd_sonar_ping_torpedo, 0, false);
             <string>/// If from enemy, hit
 
 if(not from_player) {
+    room_goto(rm_interior);
     hit_player();
-    instance_destroy();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_enemy_sub">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// If from player, hit
-
-if(from_player) {
-    other.hp -= 1;
     instance_destroy();
 }
 </string>

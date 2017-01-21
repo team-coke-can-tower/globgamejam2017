@@ -31,7 +31,7 @@ sonar_on = true;
 
 player = instance_find(obj_player, 0);
 
-sonar_sweep = instance_create(room_width/2, room_height/2, obj_sonar_sweep);
+sonar_sweep = noone;
 
 enemy_gen = instance_create(0, 0, obj_sonar_enemygen);
 </string>
@@ -125,6 +125,9 @@ if(room == rm_sonar) {
             <string>/// Set up listener
 
 if(room == rm_sonar) {
+    sonar_sweep = instance_create(room_width/2, room_height/2, obj_sonar_sweep);
+    var loop_snd = audio_play_sound(snd_sonar_loop, 0, true);
+    audio_sound_gain(loop_snd, 0.5, 0);
     audio_listener_orientation(0,1,0,0,0,1);
     audio_listener_position(room_width/2, room_height/2, 0);
 }
@@ -160,6 +163,46 @@ if(room == rm_sonar) {
         </arguments>
       </action>
     </event>
+    <event eventtype="9" enumb="83">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Toggle sonar state
+
+if(room == rm_sonar) {
+    sonar_on = not sonar_on;
+    if(not sonar_on) {
+        audio_stop_sound(snd_sonar_loop);
+        loop = audio_play_sound(snd_mic_loop, 0, true);
+        start = audio_play_sound(snd_mic_start, 0, false);
+        audio_sound_gain(loop, 0.5, 0);
+        audio_sound_gain(start, 0.5, 0);
+    } else {
+        audio_stop_sound(snd_mic_loop);
+        audio_play_sound(snd_sonar_loop, 0, true);
+        audio_play_sound(snd_sonar_start, 0, false);
+        audio_sound_gain(loop, 0.5, 0);
+        audio_sound_gain(start, 0.5, 0);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
@@ -181,33 +224,6 @@ if(room == rm_sonar) {
 
 if(room == rm_sonar) {
     obj_control.engine_on = not obj_control.engine_on;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Toggle sonar state
-
-if(room == rm_sonar) {
-    sonar_on = not sonar_on;
 }
 </string>
           </argument>
