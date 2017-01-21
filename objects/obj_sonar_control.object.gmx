@@ -27,9 +27,7 @@
             <kind>1</kind>
             <string>/// Initialize variables
 
-engine_on = true;
 sonar_on = true;
-torpedoes = 5;
 
 player = instance_find(obj_player, 0);
 
@@ -94,8 +92,8 @@ if(room == rm_sonar) {
             <string>/// Fire a torpedo
 
 if(room == rm_sonar) {
-    if(torpedoes &gt; 0) {
-        torpedoes -= 1;
+    if(obj_control.torpedoes &gt; 0) {
+        obj_control.torpedoes -= 1;
         torpedo = instance_create(room_width/2, room_height/2, obj_sonar_torpedo);
         torpedo.from_player = true;
         torpedo.target_x = mouse_x;

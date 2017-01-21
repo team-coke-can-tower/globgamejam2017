@@ -163,7 +163,7 @@ if(ai_state == "idle") {
         vspd = 0;
         hspd = 0;
     // if nearer and engine on
-    } else if((dist_to_player &lt; 200) and son_ctrl.engine_on) {
+    } else if((dist_to_player &lt; 200) and obj_control.engine_on) {
         ai_state = "alert";
         vspd = 0;
         hspd = 0;
@@ -184,7 +184,7 @@ if(ai_state == "idle") {
     var has_seen = false;
     if((dist_to_player &lt; 200) and fading) {
         has_seen = true;
-    } else if((dist_to_player &lt; 125) and son_ctrl.engine_on) {
+    } else if((dist_to_player &lt; 125) and obj_control.engine_on) {
         has_seen = true;
     }
     if(has_seen) {
@@ -254,7 +254,7 @@ if(ai_state == "idle") {
 if((step_count % 8) == 0) {
     x += hspd;
     y += vspd;
-    if(son_ctrl.engine_on) {
+    if(obj_control.engine_on) {
         y += 2;
     }
 }
