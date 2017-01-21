@@ -12,7 +12,7 @@
     <sprites name="sonar">
       <sprite>sprites\spr_sonar_player</sprite>
       <sprite>sprites\spr_sonar_sweep</sprite>
-      <sprite>sprites\spr_enemy_sub</sprite>
+      <sprite>sprites\spr_enemy_sub_small</sprite>
       <sprite>sprites\spr_sonar_torpedo</sprite>
     </sprites>
     <sprites name="interior">
@@ -46,9 +46,10 @@
       <object>objects\obj_roomhit</object>
     </objects>
     <objects name="sonar">
+      <object>objects\obj_sonar_control</object>
       <object>objects\obj_sonar_enemygen</object>
       <object>objects\obj_sonar_player</object>
-      <object>objects\obj_enemy_sub</object>
+      <object>objects\obj_enemy_sub_small</object>
       <object>objects\obj_sonar_torpedo</object>
       <object>objects\obj_sonar_sweep</object>
     </objects>
