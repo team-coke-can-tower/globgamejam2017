@@ -57,36 +57,6 @@ hitsquare_active = false
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>size = shader_get_uniform(blur, "size");
-radius = shader_get_uniform(blur, "radius");
-
-shader_set(blur);
-shader_set_uniform_f(size, sprite_width, sprite_height)
-shader_set_uniform_f(radius, 40)
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
-shader_reset();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="9" enumb="88">
       <action>
         <libid>1</libid>
