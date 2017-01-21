@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>1024</width>
-  <height>768</height>
+  <height>600</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -51,10 +51,15 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_player" x="416" y="448" name="inst_A63F9C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_press_x_txt" x="416" y="704" name="inst_51DA6782" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hitsquare" x="160" y="192" name="inst_E39997B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_submarine" x="64" y="288" name="inst_DAA2E1C7" locked="0" code="" scaleX="0.534545481204987" scaleY="0.416666656732559" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="416" y="192" name="inst_A63F9C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press_x_txt" x="416" y="448" name="inst_51DA6782" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_submarine" x="-32" y="64" name="inst_DAA2E1C7" locked="0" code="" scaleX="0.534545481204987" scaleY="0.416666656732559" colour="4294967295" rotation="0"/>
+    <instance objName="obj_listen" x="288" y="128" name="inst_96B95904" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_emit" x="224" y="192" name="inst_5F55395D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sonarhit" x="320" y="160" name="inst_793E309D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_control" x="96" y="416" name="inst_5AE88078" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_control" x="352" y="384" name="inst_E0F9E288" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="96" y="160" name="inst_A66BDB5E" locked="0" code="" scaleX="3.3125" scaleY="2.53125" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

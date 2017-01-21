@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+    <sound>sound\sound1</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="sonar">
       <sprite>sprites\spr_sonar_player</sprite>
@@ -24,7 +27,15 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\move_player.gml</script>
+    <script>scripts\play_sound.gml</script>
+    <script>scripts\hit_player.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\blur.shader</shader>
+  </shaders>
+  <fonts name="fonts">
+    <font>fonts\fnt_game</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_control</object>
     <object>objects\obj_sound_man</object>
@@ -34,6 +45,7 @@
       <object>objects\obj_hitsquare</object>
       <object>objects\obj_press_x_txt</object>
       <object>objects\obj_sonarhit</object>
+      <object>objects\obj_roomhit</object>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>
@@ -42,6 +54,8 @@
       <object>objects\obj_sonar_torpedo</object>
       <object>objects\obj_sonar_sweep</object>
     </objects>
+    <object>objects\obj_listen</object>
+    <object>objects\obj_emit</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
