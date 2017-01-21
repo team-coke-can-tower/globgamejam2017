@@ -29,6 +29,7 @@
 
 engine_on = true;
 sonar_on = true;
+torpedoes = 5;
 
 player = instance_find(obj_player, 0);
 
@@ -118,7 +119,42 @@ draw_circle(room_width/2, room_height/2, 275, true);
             <kind>1</kind>
             <string>/// Toggle engine
 
-engine_on = not engine_on;
+if(room == rm_sonar) {
+    engine_on = not engine_on;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="65">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Fire a torpedo
+
+if(room == rm_sonar) {
+    if(torpedoes &gt; 0) {
+        torpedoes -= 1;
+        torpedo = instance_create(room_width/2, room_height/2, obj_sonar_torpedo);
+        torpedo.from_player = true;
+        torpedo.target_x = mouse_x;
+        torpedo.target_y = mouse_y;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -143,7 +179,9 @@ engine_on = not engine_on;
             <kind>1</kind>
             <string>/// Toggle sonar state
 
-sonar_on = not sonar_on;
+if(room == rm_sonar) {
+    sonar_on = not sonar_on;
+}
 </string>
           </argument>
         </arguments>
