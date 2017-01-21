@@ -12,15 +12,26 @@
       <sprite>sprites\spr_enemy_sub</sprite>
       <sprite>sprites\spr_sonar_torpedo</sprite>
     </sprites>
+    <sprites name="interior">
+      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_submarine</sprite>
+      <sprite>sprites\spr_press_x_txt</sprite>
+    </sprites>
+    <sprite>sprites\spr_blank</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\move_player.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_control</object>
     <object>objects\obj_sound_man</object>
     <objects name="interior">
       <object>objects\obj_player</object>
       <object>objects\obj_submarine</object>
+      <object>objects\obj_hitsquare</object>
+      <object>objects\obj_press_x_txt</object>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>
@@ -35,6 +46,9 @@
     <room>rooms\rm_interior</room>
     <room>rooms\rm_sonar</room>
   </rooms>
+  <constants number="1">
+    <constant name="SPEED">5</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
