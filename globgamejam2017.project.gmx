@@ -42,6 +42,7 @@
       <sprite>sprites\spr_torpedoes</sprite>
       <sprite>sprites\spr_engine</sprite>
       <sprite>sprites\spr_bed</sprite>
+      <sprite>sprites\spr_health_bar</sprite>
     </sprites>
     <sprite>sprites\spr_blank_rm</sprite>
     <sprite>sprites\spr_blank_action</sprite>
@@ -89,6 +90,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_blank_fire</object>
       <object>objects\obj_controlpanel</object>
+      <object>objects\obj_health_bar</object>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>
@@ -117,10 +119,12 @@
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_interior</room>
+    <room>rooms\rm_tutorial</room>
     <room>rooms\rm_sonar</room>
     <room>rooms\rm_menu</room>
   </rooms>
-  <constants number="1">
+  <constants number="2">
+    <constant name="HEAL_TIME">60</constant>
     <constant name="SPEED">5</constant>
   </constants>
   <help>
