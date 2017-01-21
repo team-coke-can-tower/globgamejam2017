@@ -59,6 +59,68 @@ if(object_index == obj_enemy_sub_small) {
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Set up sound
+
+s_emit = audio_emitter_create();
+audio_falloff_set_model(audio_falloff_exponent_distance);
+audio_emitter_falloff(s_emit, 100, 300, 1);
+if(object_index == obj_enemy_sub_small) {
+    audio_play_sound_on(s_emit, snd_sub_small, true, 0);
+} else {
+    audio_play_sound_on(s_emit, snd_sub_big, true, 0);
+}
+audio_emitter_position(s_emit, x, y, 0);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Stop sound
+
+if(object_index == obj_enemy_sub_small) {
+    audio_stop_sound(snd_sub_small);
+} else {
+    audio_stop_sound(snd_sub_big);
+}
+audio_emitter_free(s_emit);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -293,6 +355,29 @@ if(ai_state == "idle") {
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Update sound emitter
+
+audio_emitter_position(s_emit, x, y, 0);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_sonar_sweep">
       <action>
@@ -315,6 +400,35 @@ if(ai_state == "idle") {
 
 if(not fading) {
     fading = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Play sonar ping
+
+if(ai_state == "idle") {
+    audio_play_sound(snd_sonar_ping, 0, false);    
+} else if(ai_state == "alert") {
+    audio_play_sound(snd_sonar_ping_alert, 0, false);
+} else {
+    audio_play_sound(snd_sonar_ping_seen, 0, false);
 }
 </string>
           </argument>

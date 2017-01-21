@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_listener_position(mouse_x, mouse_y, 0);
+            <string>audio_listener_position(x, y, 0);
 </string>
           </argument>
         </arguments>

@@ -5,8 +5,16 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
-    <sound>sound\sound1</sound>
+    <sounds name="sonar">
+      <sound>sound\snd_sonar_ping</sound>
+      <sound>sound\snd_sonar_ping_alert</sound>
+      <sound>sound\snd_sonar_ping_seen</sound>
+      <sound>sound\snd_sonar_ping_torpedo</sound>
+      <sound>sound\snd_sonar_loop</sound>
+      <sound>sound\snd_sub_small</sound>
+      <sound>sound\snd_sub_big</sound>
+      <sound>sound\snd_torpedo</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="sonar">

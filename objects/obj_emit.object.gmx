@@ -28,7 +28,7 @@
             <string>s_emit = audio_emitter_create();
 audio_falloff_set_model(audio_falloff_exponent_distance);
 audio_emitter_falloff(s_emit, 200, 700, 1);
-audio_play_sound_on(s_emit, sound0, true, 1);
+//audio_play_sound_on(s_emit, sound0, true, 1);
 </string>
           </argument>
         </arguments>
