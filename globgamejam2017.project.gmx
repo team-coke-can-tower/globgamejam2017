@@ -16,10 +16,6 @@
       <sound>sound\snd_sub_big</sound>
       <sound>sound\snd_sub_small</sound>
       <sound>sound\snd_torpedo</sound>
-      <sound>sound\snd_mic_loop</sound>
-      <sound>sound\snd_mic_start</sound>
-      <sound>sound\snd_sonar_start</sound>
-      <sound>sound\snd_ocean_ambient</sound>
     </sounds>
     <sounds name="alarms">
       <sound>sound\snd_control_rm_alarm</sound>
@@ -42,7 +38,6 @@
       <sprite>sprites\spr_submarine_holder</sprite>
       <sprite>sprites\spr_fire</sprite>
       <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_bed</sprite>
       <sprite>sprites\spr_steering</sprite>
       <sprite>sprites\spr_controlpanel</sprite>
       <sprite>sprites\spr_torpedoes</sprite>
@@ -51,15 +46,18 @@
     <sprite>sprites\spr_blank_rm</sprite>
     <sprite>sprites\spr_blank_action</sprite>
     <sprites name="menu">
+      <sprite>sprites\spr_menu_bubble</sprite>
+      <sprite>sprites\spr_menu_sub_back</sprite>
+      <sprite>sprites\spr_menu_sub_front</sprite>
+      <sprite>sprites\spr_menu_title</sprite>
+      <sprite>sprites\spr_quit_button</sprite>
       <sprite>sprites\spr_start_button</sprite>
       <sprite>sprites\spr_tutorial_button</sprite>
-      <sprite>sprites\spr_quit_button</sprite>
-      <sprite>sprites\spr_menu_bubble</sprite>
-      <sprite>sprites\spr_menu_title</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sonar</background>
+    <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -104,22 +102,23 @@
     </objects>
     <object>objects\obj_emit</object>
     <objects name="menu">
-      <object>objects\obj_menu_title</object>
-      <object>objects\obj_menu_button</object>
-      <object>objects\obj_menu_start</object>
-      <object>objects\obj_menu_quit</object>
-      <object>objects\obj_menu_tutorial</object>
       <object>objects\obj_menu_bubble</object>
+      <object>objects\obj_menu_button</object>
       <object>objects\obj_menu_control</object>
+      <object>objects\obj_menu_quit</object>
+      <object>objects\obj_menu_start</object>
+      <object>objects\obj_menu_sub_back</object>
+      <object>objects\obj_menu_sub_front</object>
+      <object>objects\obj_menu_title</object>
+      <object>objects\obj_menu_tutorial</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_interior</room>
-    <room>rooms\rm_tutorial</room>
-    <room>rooms\rm_interior</room>
     <room>rooms\rm_sonar</room>
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_tutorial</room>
   </rooms>
   <constants number="1">
     <constant name="SPEED">5</constant>
