@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_sonar_entity</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -135,18 +135,23 @@ if(ai_state == "idle") {
     // if near and hit with sonar ping
     if((dist_to_player &lt; 275) and fading) {
         ai_state = "alert";
+        vspd = 0;
+        hspd = 0;
     // if nearer and engine on
     } else if((dist_to_player &lt; 200) and son_ctrl.engine_on) {
         ai_state = "alert";
+        vspd = 0;
+        hspd = 0;
     }
 } else if(ai_state == "alert") {
     // start waiting and looking in intervals
-    if(alarm[2] &lt;= 0) {
-        alarm[2] = random_range(30, 120);
+    if(alarm[0] &lt;= 0) {
         if((vspd == 0) and (hspd == 0)) {
+            alarm[0] = random_range(10, 30);
             vspd = sign(player.y - y);
             hspd = sign(player.x - x);
         } else {
+            alarm[0] = random_range(60, 240);
             vspd = 0;
             hspd = 0;
         }
@@ -176,10 +181,10 @@ if(ai_state == "idle") {
 } else if(ai_state == "seen-wait"){
     hspd = 0;
     vspd = 0;
-    if(alarm[0] == 0) {
+    if(alarm[1] == 0) {
         ai_state = "seen-run";
     } else {
-        alarm[0] = random_range(300, 600);
+        alarm[1] = random_range(300, 600);
     }
 } else if(ai_state == "seen-run") {
     vspd = 2;
@@ -191,40 +196,13 @@ if(ai_state == "idle") {
 } else if(ai_state == "seen-fight") {
     hspd = 0;
     vspd = 0;
-    if(alarm[0] &lt;= 0) {
-        alarm[0] = random_range(60, 240);
+    if(alarm[2] &lt;= 0) {
+        alarm[2] = random_range(60, 240);
         torpedo = instance_create(x, y, obj_sonar_torpedo);
         torpedo.from_player = false;
         torpedo.target_x = player.x;
         torpedo.target_y = player.y;
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// If outside sonar room, not visible
-
-if(room == rm_interior) {
-    visible = false;
-} else {
-    visible = true;
 }
 </string>
           </argument>

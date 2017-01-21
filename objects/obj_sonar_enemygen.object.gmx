@@ -56,9 +56,9 @@ max_num_objs = 2;   // maximum allowed number of things to spawn at a time
 
 var pos;
 if(random(1) &lt; 0.5)
-    pos = random_range(0, room_width / 4);
+    pos = random_range(0, room_width / 3);
 else
-    pos = random_range(room_width * 3 / 4, room_width);
+    pos = random_range(room_width * 2 / 3, room_width);
 if(random(1) &lt; 0.9) {
     instance_create(pos, 0, obj_enemy_sub_small);
 } else {
