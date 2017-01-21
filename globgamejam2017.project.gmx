@@ -5,8 +5,6 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
-    <sound>sound\sound1</sound>
     <sounds name="sonar">
       <sound>sound\snd_sonar_loop</sound>
       <sound>sound\snd_sonar_ping</sound>
@@ -22,6 +20,7 @@
       <sound>sound\snd_engine_rm_alarm</sound>
       <sound>sound\snd_wepons_rm_alarm</sound>
     </sounds>
+    <sound>sound\snd_ocean_ambient</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="sonar">
@@ -42,17 +41,18 @@
       <sprite>sprites\spr_controlpanel</sprite>
       <sprite>sprites\spr_torpedoes</sprite>
       <sprite>sprites\spr_engine</sprite>
+      <sprite>sprites\spr_bed</sprite>
     </sprites>
     <sprite>sprites\spr_blank_rm</sprite>
     <sprite>sprites\spr_blank_action</sprite>
     <sprites name="menu">
-      <sprite>sprites\spr_menu_bubble</sprite>
       <sprite>sprites\spr_menu_sub_back</sprite>
       <sprite>sprites\spr_menu_sub_front</sprite>
-      <sprite>sprites\spr_menu_title</sprite>
       <sprite>sprites\spr_quit_button</sprite>
       <sprite>sprites\spr_start_button</sprite>
       <sprite>sprites\spr_tutorial_button</sprite>
+      <sprite>sprites\spr_menu_title</sprite>
+      <sprite>sprites\spr_menu_bubble</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -79,7 +79,7 @@
       <object>objects\obj_hitsquare</object>
       <object>objects\obj_press_x_txt</object>
       <object>objects\obj_sonarhit</object>
-      <object>objects\obj_controlpanel</object>
+      <object>objects\obj_roomhit</object>
       <object>objects\obj_steering</object>
       <object>objects\obj_bed</object>
       <object>objects\obj_engine</object>
@@ -88,6 +88,7 @@
       <object>objects\obj_fire</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_blank_fire</object>
+      <object>objects\obj_controlpanel</object>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>
@@ -108,9 +109,9 @@
       <object>objects\obj_menu_quit</object>
       <object>objects\obj_menu_start</object>
       <object>objects\obj_menu_sub_back</object>
-      <object>objects\obj_menu_sub_front</object>
       <object>objects\obj_menu_title</object>
       <object>objects\obj_menu_tutorial</object>
+      <object>objects\obj_menu_sub_front</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -118,7 +119,6 @@
     <room>rooms\rm_interior</room>
     <room>rooms\rm_sonar</room>
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_tutorial</room>
   </rooms>
   <constants number="1">
     <constant name="SPEED">5</constant>
