@@ -52,14 +52,18 @@ max_num_objs = 2;   // maximum allowed number of things to spawn at a time
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Add new small submarine
+            <string>/// Add new submarine
 
 var pos;
 if(random(1) &lt; 0.5)
     pos = random_range(0, room_width / 4);
 else
     pos = random_range(room_width * 3 / 4, room_width);
-instance_create(pos, 0, obj_enemy_sub_small);
+if(random(1) &lt; 0.9) {
+    instance_create(pos, 0, obj_enemy_sub_small);
+} else {
+    instance_create(pos, 0, obj_enemy_sub_big);
+}
 </string>
           </argument>
         </arguments>
@@ -84,9 +88,9 @@ instance_create(pos, 0, obj_enemy_sub_small);
             <kind>1</kind>
             <string>/// Add another submarine if none on screen after set time
 
-num_small_subs = instance_number(obj_enemy_sub_small);
+num_subs = instance_number(obj_enemy_sub);
 
-if((num_small_subs &lt; max_num_objs) and (alarm[0] == -1)) {
+if((num_subs &lt; max_num_objs) and (alarm[0] == -1)) {
     alarm[0] = random_range(120, 600);
 }
 </string>
