@@ -4,8 +4,8 @@
 
 randomize();
 
-// can hit same room twice even if still broken
-var room_hit = 0//random_range(0, 3);
+var room_hit = random_range(0, 4);
+
 obj_control.room_hit[room_hit] = true;
 
 if(room_hit == obj_control.control_room && room == rm_sonar){

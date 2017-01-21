@@ -53,9 +53,10 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hitsquare_active = false
-
-put_out_fires(room_type)
+            <string>if(on_hitsquare){
+    hitsquare_active = false
+    put_out_fires(room_type)
+}
 </string>
           </argument>
         </arguments>
@@ -78,7 +79,7 @@ put_out_fires(room_type)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hitsquare_active){
+            <string>if(hitsquare_active &amp;&amp; on_hitsquare){
     alarm[0] = 30
     action_text = "Hold X to heal"
 }

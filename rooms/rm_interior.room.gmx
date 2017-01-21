@@ -56,16 +56,16 @@
     <instance objName="obj_submarine" x="-14" y="64" name="inst_DAA2E1C7" locked="0" code="" scaleX="0.534545481204987" scaleY="0.416666656732559" colour="4294967295" rotation="0"/>
     <instance objName="obj_sonarhit" x="433" y="170" name="inst_793E309D" locked="0" code="" scaleX="3.47000002861023" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control" x="352" y="384" name="inst_E0F9E288" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_roomhit" x="32" y="96" name="inst_A66BDB5E" locked="0" code="room_type = obj_control.engine_room&#xA;obj_control.room_inst[room_type] = id;&#xA;" scaleX="6.19354820251465" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="16" y="100" name="inst_engine_rm" locked="0" code="room_type = obj_control.engine_room&#xA;obj_control.room_inst[room_type] = id;" scaleX="6.78000020980835" scaleY="7.375" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="220" y="134" name="inst_0D74E3CF" locked="0" code="" scaleX="0.5" scaleY="0.452380955219269" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="220" y="256" name="inst_F1D50B54" locked="0" code="" scaleX="0.5" scaleY="0.380952388048172" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="630" y="254" name="inst_EA303E4F" locked="0" code="" scaleX="0.5" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="630" y="132" name="inst_16D22D25" locked="0" code="" scaleX="0.5" scaleY="0.452380955219269" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="254" name="inst_BC95240D" locked="0" code="" scaleX="0.5" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="415" y="132" name="inst_1C733607" locked="0" code="" scaleX="0.5" scaleY="0.452380955219269" colour="4294967295" rotation="0"/>
-    <instance objName="obj_roomhit" x="643" y="108" name="inst_C0DB3936" locked="0" code="" scaleX="8.16129016876221" scaleY="8" colour="4294967295" rotation="0"/>
-    <instance objName="obj_roomhit" x="429" y="116" name="inst_DC16B9CC" locked="0" code="" scaleX="6.71000003814697" scaleY="7.45161294937134" colour="4294967295" rotation="0"/>
-    <instance objName="obj_roomhit" x="235" y="113" name="inst_85207CC1" locked="0" code="" scaleX="6" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="643" y="108" name="inst_weapon_rm" locked="0" code="room_type = obj_control.weapon_room&#xA;obj_control.room_inst[room_type] = id;" scaleX="7.13000011444092" scaleY="7.90625" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="429" y="116" name="inst_control_rm" locked="0" code="room_type = obj_control.control_room&#xA;obj_control.room_inst[room_type] = id;" scaleX="6.71000003814697" scaleY="7.45161294937134" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="235" y="113" name="inst_living_rm" locked="0" code="room_type = obj_control.living_quarters&#xA;obj_control.room_inst[room_type] = id;" scaleX="6" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_steering" x="575" y="149" name="inst_05A471E5" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_weapons" x="698" y="147" name="inst_CC994881" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_weapons" x="698" y="167" name="inst_3608A6D9" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
