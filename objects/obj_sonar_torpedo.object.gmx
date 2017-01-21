@@ -192,8 +192,8 @@ if(from_player) {
             <string>/// If from enemy, hit
 
 if(not from_player) {
+    hit_player();
     instance_destroy();
-    // TODO
 }
 </string>
           </argument>

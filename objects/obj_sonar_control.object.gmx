@@ -152,7 +152,7 @@ if(room == rm_sonar) {
             <string>/// Toggle engine
 
 if(room == rm_sonar) {
-    engine_on = not engine_on;
+    obj_control.engine_on = not obj_control.engine_on;
 }
 </string>
           </argument>

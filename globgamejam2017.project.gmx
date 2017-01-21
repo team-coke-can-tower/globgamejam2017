@@ -32,7 +32,6 @@
     <script>scripts\move_player.gml</script>
     <script>scripts\play_sound.gml</script>
     <script>scripts\hit_player.gml</script>
-    <script>scripts\script3.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_game</font>
@@ -53,8 +52,8 @@
       <object>objects\obj_sonar_player</object>
       <object>objects\obj_enemy_sub</object>
       <object>objects\obj_sonar_torpedo</object>
-      <object>objects\obj_sonar_sweep</object>
       <object>objects\obj_sonar_control</object>
+      <object>objects\obj_sonar_sweep</object>
       <object>objects\obj_sonar_entity</object>
       <object>objects\obj_enemy_sub_big</object>
       <object>objects\obj_enemy_sub_small</object>
