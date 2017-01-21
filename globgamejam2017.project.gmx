@@ -21,8 +21,11 @@
       <sprite>sprites\spr_submarine</sprite>
       <sprite>sprites\spr_press_x_txt</sprite>
       <sprite>sprites\spr_submarine_holder</sprite>
+      <sprite>sprites\spr_fire</sprite>
+      <sprite>sprites\spr_wall</sprite>
     </sprites>
-    <sprite>sprites\spr_blank</sprite>
+    <sprite>sprites\spr_blank_rm</sprite>
+    <sprite>sprites\spr_blank_action</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sonar</background>
@@ -32,6 +35,7 @@
     <script>scripts\move_player.gml</script>
     <script>scripts\play_sound.gml</script>
     <script>scripts\hit_player.gml</script>
+    <script>scripts\place_fires.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_game</font>
@@ -46,6 +50,9 @@
       <object>objects\obj_press_x_txt</object>
       <object>objects\obj_sonarhit</object>
       <object>objects\obj_roomhit</object>
+      <object>objects\obj_fire</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_blank_fire</object>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>

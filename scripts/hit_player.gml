@@ -23,3 +23,6 @@ switch(random_range(0, 3)) {
         obj_control.weapon_room_hit = true;
         break;
 }
+// Hits a random room
+
+place_fires()

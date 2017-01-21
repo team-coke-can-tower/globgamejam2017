@@ -147,16 +147,16 @@
     image_speed = 1;
 }
 
-if(keyboard_check(vk_left)){
+if(keyboard_check_pressed(vk_left)){
     image_angle = 0
 }
-if(keyboard_check(vk_right)){
+if(keyboard_check_pressed(vk_right)){
     image_angle = 180
 }
-if(keyboard_check(vk_up)){
+if(keyboard_check_pressed(vk_up)){
     image_angle = -90
 }
-if(keyboard_check(vk_down)){
+if(keyboard_check_pressed(vk_down)){
     image_angle = 90
 }
 </string>
