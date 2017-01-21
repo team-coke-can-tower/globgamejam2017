@@ -46,11 +46,14 @@
       <sprite>sprites\spr_sofa</sprite>
       <sprite>sprites\spr_panel2</sprite>
       <sprite>sprites\spr_box</sprite>
+      <sprite>sprites\spr_compass</sprite>
+      <sprite>sprites\spr_compass_needle</sprite>
+      <sprite>sprites\spr_compass_left</sprite>
+      <sprite>sprites\spr_compass_right</sprite>
     </sprites>
     <sprite>sprites\spr_blank_rm</sprite>
     <sprite>sprites\spr_blank_action</sprite>
     <sprites name="menu">
-      <sprite>sprites\spr_menu_sub_back</sprite>
       <sprite>sprites\spr_menu_sub_front</sprite>
       <sprite>sprites\spr_quit_button</sprite>
       <sprite>sprites\spr_start_button</sprite>
@@ -97,6 +100,11 @@
       <object>objects\obj_box</object>
       <object>objects\obj_panel2</object>
       <object>objects\obj_sofa</object>
+      <objects name="compass">
+        <object>objects\obj_compass</object>
+        <object>objects\obj_compass_left</object>
+        <object>objects\obj_compass_right</object>
+      </objects>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>
@@ -125,12 +133,12 @@
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_interior</room>
-    <room>rooms\rm_tutorial</room>
     <room>rooms\rm_sonar</room>
     <room>rooms\rm_menu</room>
   </rooms>
-  <constants number="2">
+  <constants number="3">
     <constant name="HEAL_TIME">60</constant>
+    <constant name="COMPASS_INC">10</constant>
     <constant name="SPEED">5</constant>
   </constants>
   <help>

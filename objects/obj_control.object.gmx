@@ -28,6 +28,7 @@
             <string>/// Initialize variables
 engine_on = true;
 torpedoes = 5;
+compass_angle = 0
 
 // whether different rooms hit or not
 engine_room = 0;
