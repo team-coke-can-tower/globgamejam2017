@@ -208,7 +208,7 @@ if(ai_state == "idle") {
     vspd = 0;
     if(alarm[1] == 0) {
         ai_state = "seen-run";
-    } else {
+    } else if(alarm[1] == -1) {
         alarm[1] = random_range(300, 600);
     }
 } else if(ai_state == "seen-run") {
@@ -221,8 +221,8 @@ if(ai_state == "idle") {
 } else if(ai_state == "seen-fight") {
     hspd = 0;
     vspd = 0;
-    if(alarm[2] &lt;= 0) {
-        alarm[2] = random_range(60, 240);
+    if(alarm[2] == -1) {
+        alarm[2] = random_range(240, 360);
         torpedo = instance_create(x, y, obj_sonar_torpedo);
         torpedo.from_player = false;
         torpedo.target_x = player.x;
