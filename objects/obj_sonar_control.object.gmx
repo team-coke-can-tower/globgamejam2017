@@ -60,11 +60,13 @@ enemy_gen = instance_create(0, 0, obj_sonar_enemygen);
             <kind>1</kind>
             <string>/// Toggle sonar
 
-if(sonar_on and (not instance_exists(sonar_sweep))) {
-    sonar_sweep = instance_create(room_width/2, room_height/2, obj_sonar_sweep);
-} else if((not sonar_on) and instance_exists(sonar_sweep)) {
-    with(sonar_sweep) {
-        instance_destroy();
+if(room == rm_sonar) {
+    if(sonar_on and (not instance_exists(sonar_sweep))) {
+        sonar_sweep = instance_create(room_width/2, room_height/2, obj_sonar_sweep);
+    } else if((not sonar_on) and instance_exists(sonar_sweep)) {
+        with(sonar_sweep) {
+            instance_destroy();
+        }
     }
 }
 </string>
@@ -106,6 +108,33 @@ if(room == rm_sonar) {
       </action>
     </event>
     <event eventtype="9" enumb="88">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Go to interior room
+
+if(room == rm_sonar) {
+    room_goto(rm_interior);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
         <id>603</id>

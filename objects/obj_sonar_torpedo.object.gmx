@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-10</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>obj_sonar_entity</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -64,7 +64,7 @@ alpha_change_speed = 0.1;
             <kind>1</kind>
             <string>/// Approach target
 
-speed = 3;
+speed = 1;
 direction = point_direction(start_x, start_y, target_x, target_y);
 image_angle = direction;
 </string>

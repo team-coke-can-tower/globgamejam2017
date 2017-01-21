@@ -62,7 +62,6 @@
     <object>objects\obj_listen</object>
     <object>objects\obj_emit</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_interior</room>
