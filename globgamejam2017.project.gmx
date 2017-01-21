@@ -16,6 +16,7 @@
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_submarine</sprite>
       <sprite>sprites\spr_press_x_txt</sprite>
+      <sprite>sprites\spr_submarine_holder</sprite>
     </sprites>
     <sprite>sprites\spr_blank</sprite>
   </sprites>
@@ -32,6 +33,7 @@
       <object>objects\obj_submarine</object>
       <object>objects\obj_hitsquare</object>
       <object>objects\obj_press_x_txt</object>
+      <object>objects\obj_sonarhit</object>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>
