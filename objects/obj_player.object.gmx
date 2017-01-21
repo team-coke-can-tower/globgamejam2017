@@ -140,11 +140,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_lastkey == vk_left
-|| keyboard_lastkey == vk_right
-|| keyboard_lastkey == vk_up
-|| keyboard_lastkey == vk_down){
+            <string>if(keyboard_check(vk_left)
+|| keyboard_check(vk_right)
+|| keyboard_check(vk_up)
+|| keyboard_check(vk_down)){
     image_speed = 1;
+}
+
+if(keyboard_check(vk_left)){
+    image_angle = 0
+}
+if(keyboard_check(vk_right)){
+    image_angle = 180
+}
+if(keyboard_check(vk_up)){
+    image_angle = -90
+}
+if(keyboard_check(vk_down)){
+    image_angle = 90
 }
 </string>
           </argument>
@@ -168,7 +181,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>if(!(keyboard_check(vk_left)
+|| keyboard_check(vk_right)
+|| keyboard_check(vk_up)
+|| keyboard_check(vk_down))){
+    image_speed = 0;
+}
 </string>
           </argument>
         </arguments>
