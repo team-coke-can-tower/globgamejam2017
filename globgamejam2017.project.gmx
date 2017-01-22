@@ -50,6 +50,7 @@
       <sprite>sprites\spr_compass_needle</sprite>
       <sprite>sprites\spr_compass_left</sprite>
       <sprite>sprites\spr_compass_right</sprite>
+      <sprite>sprites\spr_health_bar</sprite>
     </sprites>
     <sprite>sprites\spr_blank_rm</sprite>
     <sprite>sprites\spr_blank_action</sprite>
@@ -82,6 +83,7 @@
     <object>objects\obj_control</object>
     <object>objects\obj_sound_man</object>
     <objects name="interior">
+      <object>objects\obj_health_bar</object>
       <object>objects\obj_player</object>
       <object>objects\obj_submarine</object>
       <object>objects\obj_hitsquare</object>
