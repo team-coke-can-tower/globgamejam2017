@@ -3,7 +3,7 @@
 var room_index = argument0;
 var room_inst = obj_control.room_inst[room_index]
 var fires = obj_control.room_fires[room_index]
-var num_fires = irandom_range(4, 8);
+var num_fires = irandom_range(7, 20);
 
 for(var i = 0;i < num_fires;i++){
     while(true){

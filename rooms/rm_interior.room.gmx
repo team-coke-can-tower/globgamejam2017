@@ -89,6 +89,9 @@
     <instance objName="obj_compasshit" x="630" y="281" name="inst_A12B8D5A" locked="0" code="" scaleX="1.96875" scaleY="1.1612902879715" colour="4294967295" rotation="0"/>
     <instance objName="obj_missilehit" x="828" y="269" name="inst_93740EE5" locked="0" code="" scaleX="1.8125" scaleY="1.8400000333786" colour="4294967295" rotation="0"/>
     <instance objName="obj_missilehit" x="827" y="379" name="inst_AEACFEC2" locked="0" code="" scaleX="1.94000005722046" scaleY="1.96774196624756" colour="4294967295" rotation="0"/>
+    <instance objName="obj_distance" x="884" y="77" name="inst_79ADA781" locked="0" code="" scaleX="3.51999998092651" scaleY="2.48387098312378" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pausehit" x="398" y="373" name="inst_C85EA049" locked="0" code="" scaleX="3.46875" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_screen" x="888" y="76" name="inst_9CBDAFD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

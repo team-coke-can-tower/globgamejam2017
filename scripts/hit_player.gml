@@ -12,7 +12,7 @@ while(obj_control.room_hit[room_hit]){
 obj_control.room_hit[room_hit] = true;
 
 var all_rooms_hit = true;
-for(var i = 0;i<3;i++){
+for(var i = 0;i<4;i++){
     if(!obj_control.room_hit[i]){
         all_rooms_hit = false;
     }
@@ -20,7 +20,7 @@ for(var i = 0;i<3;i++){
 
 if(all_rooms_hit){
     // lose
-    obj_control.alarm[0] = 20
+    obj_control.alarm[0] = 30
 }
 
 if(room_hit == obj_control.control_room && room == rm_sonar){
@@ -28,6 +28,7 @@ if(room_hit == obj_control.control_room && room == rm_sonar){
 }
 
 audio_play_sound(obj_control.room_sound[room_hit], 1, true)
+audio_play_sound(snd_explosion, 1, false);
 
 obj_control.room_inst[room_hit].hitsquare_active = true;
 

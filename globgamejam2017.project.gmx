@@ -25,6 +25,7 @@
     </sounds>
     <sound>sound\snd_ocean_ambient</sound>
     <sound>sound\snd_footsteps_1</sound>
+    <sound>sound\snd_explosion</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="sonar">
@@ -55,9 +56,9 @@
       <sprite>sprites\spr_compass_needle</sprite>
       <sprite>sprites\spr_compass_left</sprite>
       <sprite>sprites\spr_compass_right</sprite>
+      <sprite>sprites\spr_screen</sprite>
     </sprites>
     <sprite>sprites\spr_blank_rm</sprite>
-    <sprite>sprites\spr_resume_button</sprite>
     <sprite>sprites\spr_blank_action</sprite>
     <sprites name="menu">
       <sprite>sprites\spr_menu_sub_front</sprite>
@@ -68,11 +69,21 @@
       <sprite>sprites\spr_menu_bubble</sprite>
       <sprite>sprites\spr_menu_sub_back</sprite>
     </sprites>
+    <sprites name="losing_winning_pause">
+      <sprite>sprites\spr_resume_button</sprite>
+      <sprite>sprites\spr_losing_title</sprite>
+      <sprite>sprites\spr_winning_title</sprite>
+      <sprite>sprites\spr_menu_button</sprite>
+      <sprite>sprites\spr_resume</sprite>
+      <sprite>sprites\spr_paused</sprite>
+    </sprites>
+    <sprite>sprites\blank</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sonar</background>
     <background>background\bg_interior</background>
     <background>background\bg_menu</background>
+    <background>background\bg_winning</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -84,6 +95,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_game</font>
+    <font>fonts\fnt_distance</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_control</object>
@@ -95,6 +107,7 @@
       <object>objects\obj_hitsquare</object>
       <object>objects\obj_press_x_txt</object>
       <object>objects\obj_sonarhit</object>
+      <object>objects\obj_pausehit</object>
       <object>objects\obj_missilehit</object>
       <object>objects\obj_compasshit</object>
       <object>objects\obj_roomhit</object>
@@ -114,6 +127,7 @@
         <object>objects\obj_compass_left</object>
         <object>objects\obj_compass_right</object>
       </objects>
+      <object>objects\obj_screen</object>
     </objects>
     <objects name="sonar">
       <object>objects\obj_sonar_enemygen</object>
@@ -143,7 +157,14 @@
       <object>objects\obj_tutorial_control</object>
     </objects>
     <object>objects\obj_screenshake</object>
-    <object>objects\obj_resume_button</object>
+    <objects name="losing_winning_pause">
+      <object>objects\obj_losing_title</object>
+      <object>objects\obj_winning_title</object>
+      <object>objects\obj_menu</object>
+      <object>objects\obj_resume</object>
+      <object>objects\obj_paused</object>
+    </objects>
+    <object>objects\obj_distance</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
@@ -151,7 +172,8 @@
     <room>rooms\rm_sonar</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_tutorial</room>
-    <room>rooms\rm_pause_menu</room>
+    <room>rooms\rm_pause</room>
+    <room>rooms\rm_victory</room>
     <room>rooms\rm_losing</room>
   </rooms>
   <constants number="3">
