@@ -10,7 +10,7 @@
   <persistent>-1</persistent>
   <colour>2689548</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>background_hspeed[0] = -0.4</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -55,7 +55,6 @@
     <instance objName="obj_press_x_txt" x="537" y="570" name="inst_51DA6782" locked="0" code="" scaleX="2.18090462684631" scaleY="1.87999999523163" colour="4294967295" rotation="0"/>
     <instance objName="obj_submarine" x="72" y="193" name="inst_DAA2E1C7" locked="0" code="" scaleX="0.534545481204987" scaleY="0.416666656732559" colour="4294967295" rotation="0"/>
     <instance objName="obj_sonarhit" x="519" y="299" name="inst_793E309D" locked="0" code="" scaleX="3.47000002861023" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_control" x="438" y="513" name="inst_E0F9E288" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="306" y="263" name="inst_0D74E3CF" locked="0" code="" scaleX="0.5" scaleY="0.452380955219269" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="306" y="385" name="inst_F1D50B54" locked="0" code="" scaleX="0.5" scaleY="0.380952388048172" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="716" y="383" name="inst_EA303E4F" locked="0" code="" scaleX="0.5" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
@@ -88,6 +87,8 @@
     <instance objName="obj_roomhit" x="512" y="233" name="inst_control_rm" locked="0" code="room_type = obj_control.control_room&#xA;obj_control.room_inst[room_type] = id;" scaleX="6.71000003814697" scaleY="7.45161294937134" colour="4294967295" rotation="0"/>
     <instance objName="obj_roomhit" x="318" y="217" name="inst_living_rm" locked="0" code="room_type = obj_control.living_quarters&#xA;obj_control.room_inst[room_type] = id;" scaleX="6" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_compasshit" x="630" y="281" name="inst_A12B8D5A" locked="0" code="" scaleX="1.96875" scaleY="1.1612902879715" colour="4294967295" rotation="0"/>
+    <instance objName="obj_missilehit" x="828" y="269" name="inst_93740EE5" locked="0" code="" scaleX="1.8125" scaleY="1.8400000333786" colour="4294967295" rotation="0"/>
+    <instance objName="obj_missilehit" x="827" y="379" name="inst_AEACFEC2" locked="0" code="" scaleX="1.94000005722046" scaleY="1.96774196624756" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

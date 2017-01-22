@@ -95,7 +95,7 @@
           <argument>
             <kind>1</kind>
             <string>if(_show_text){
-    draw_set_colour(c_yellow)
+    draw_set_colour(c_white)
     draw_set_font(fnt_game)
     draw_set_halign(fa_center)
     draw_text(x, y, text);
