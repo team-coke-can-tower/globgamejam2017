@@ -31,6 +31,7 @@ initial_text = "Press and hold X to heal room"
 action_text = initial_text
 hitsquare_active = false
 event_inherited();
+health_bar = 0
 </string>
           </argument>
         </arguments>
@@ -107,7 +108,7 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hitsquare_active &amp;&amp; on_hitsquare){
+            <string>if(hitsquare_active &amp;&amp; on_hitsquare &amp;&amp; health_bar != 0){
     alarm[0] = -1
     action_text = initial_text
     with(health_bar) instance_destroy()

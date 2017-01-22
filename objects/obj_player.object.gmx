@@ -147,10 +147,8 @@ footstep_sound = 0
 || keyboard_check(vk_up)
 || keyboard_check(vk_down)){
     image_speed = 1;
-    show_debug_message(footstep_sound)
     
     if(footstep_sound == 0){
-        show_debug_message("hi")
         footstep_sound = audio_play_sound(snd_footsteps_1, 0, true)
     }
 }

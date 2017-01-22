@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>room_goto(rm_interior)
+instance_activate_object(obj_enemy_sub)
+instance_activate_object(obj_sonar_enemygen)
+instance_activate_object(obj_sonar_torpedo)
+audio_resume_all()
 obj_control.is_paused = false
 </string>
           </argument>
