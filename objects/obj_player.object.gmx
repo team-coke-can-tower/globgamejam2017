@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0;
 
-footstep_sound = -1
+footstep_sound = 0
 </string>
           </argument>
         </arguments>
@@ -147,7 +147,10 @@ footstep_sound = -1
 || keyboard_check(vk_up)
 || keyboard_check(vk_down)){
     image_speed = 1;
-    if(footstep_sound != -1){
+    show_debug_message(footstep_sound)
+    
+    if(footstep_sound == 0){
+        show_debug_message("hi")
         footstep_sound = audio_play_sound(snd_footsteps_1, 0, true)
     }
 }
@@ -192,6 +195,7 @@ if(keyboard_check_pressed(vk_down)){
 || keyboard_check(vk_down))){
     image_speed = 0;
     audio_stop_sound(footstep_sound)
+    footstep_sound = 0
 }
 </string>
           </argument>

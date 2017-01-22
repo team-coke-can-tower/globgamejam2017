@@ -13,3 +13,5 @@ for(var i = 0;i<fires_size;i++){
 obj_control.room_fires[room_index] = ds_list_create();
 
 audio_stop_sound(obj_control.room_sound_inst[room_index])
+
+obj_control.room_hit[room_index] = false;
