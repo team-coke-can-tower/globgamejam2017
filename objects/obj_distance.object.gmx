@@ -29,7 +29,8 @@
 draw_set_font(fnt_distance)
 draw_set_halign(fa_center)
 draw_set_valign(fa_center)
-draw_text(x, y, "18 KM")
+var dist = round((obj_control.dist_travelled / obj_control.victory_dist) * 90);
+draw_text_transformed(x, y, string(dist) + "/90 KM", 0.75, 0.75, 0);
 </string>
           </argument>
         </arguments>
