@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_compass_left</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -94,7 +94,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_control.compass_angle = (obj_control.compass_angle - 20) mod 360
+            <string>obj_control.compass_angle = (obj_control.compass_angle + 10) mod 360
 </string>
           </argument>
         </arguments>

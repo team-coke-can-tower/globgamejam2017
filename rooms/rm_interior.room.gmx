@@ -80,9 +80,13 @@
     <instance objName="obj_panel2" x="584" y="422" name="inst_309A4386" locked="0" code="" scaleX="1" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="685" y="431" name="inst_A532D2D2" locked="0" code="" scaleX="1" scaleY="0.5" colour="4294967295" rotation="180"/>
     <instance objName="obj_box" x="708" y="271" name="inst_72793BE3" locked="0" code="" scaleX="0.400000005960464" scaleY="0.25" colour="4294967295" rotation="180"/>
-    <instance objName="obj_compass_left" x="610" y="170" name="inst_4913D7D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_compass_right" x="684" y="169" name="inst_41122B8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_compass" x="661" y="212" name="inst_66E67757" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_compass_left" x="624" y="183" name="inst_4913D7D1" locked="0" code="" scaleX="0.75" scaleY="0.75" colour="4294967295" rotation="0"/>
+    <instance objName="obj_compass_right" x="671" y="182" name="inst_41122B8B" locked="0" code="" scaleX="0.75" scaleY="0.75" colour="4294967295" rotation="0"/>
+    <instance objName="obj_compass" x="661" y="217" name="inst_66E67757" locked="0" code="" scaleX="0.75" scaleY="0.75" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="97" y="222" name="inst_engine_rm" locked="0" code="room_type = obj_control.engine_room&#xA;obj_control.room_inst[room_type] = id;" scaleX="6.78000020980835" scaleY="7.375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="732" y="227" name="inst_weapon_rm" locked="0" code="room_type = obj_control.weapon_room&#xA;obj_control.room_inst[room_type] = id;" scaleX="7.13000011444092" scaleY="7.90625" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="512" y="233" name="inst_control_rm" locked="0" code="room_type = obj_control.control_room&#xA;obj_control.room_inst[room_type] = id;" scaleX="6.71000003814697" scaleY="7.45161294937134" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomhit" x="318" y="217" name="inst_living_rm" locked="0" code="room_type = obj_control.living_quarters&#xA;obj_control.room_inst[room_type] = id;" scaleX="6" scaleY="8" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -88,6 +88,7 @@
       <object>objects\obj_hitsquare</object>
       <object>objects\obj_press_x_txt</object>
       <object>objects\obj_sonarhit</object>
+      <object>objects\obj_compasshit</object>
       <object>objects\obj_roomhit</object>
       <object>objects\obj_steering</object>
       <object>objects\obj_bed</object>
