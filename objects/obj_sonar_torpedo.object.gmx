@@ -125,8 +125,8 @@ direction = point_direction(start_x, start_y, target_x, target_y);
 image_angle = direction;
 
 if(obj_control.engine_on and ((step_count % 4) == 0)) {
-    x += lengthdir_x(2, 360 - obj_control.compass_angle);
-    y += lengthdir_y(2, 360 - obj_control.compass_angle);
+    x += lengthdir_x(2, 360 - (obj_control.compass_angle + 90));
+    y += lengthdir_y(2, 360 - (obj_control.compass_angle + 90));
 }
 step_count += 1;
 </string>

@@ -316,8 +316,8 @@ if((step_count % 8) == 0) {
     x += hspd;
     y += vspd;
     if(obj_control.engine_on) {
-        x += lengthdir_x(2, 360 - obj_control.compass_angle);
-        y += lengthdir_y(2, 360 - obj_control.compass_angle);
+        x += lengthdir_x(2, 360 - (obj_control.compass_angle + 90));
+        y += lengthdir_y(2, 360 - (obj_control.compass_angle + 90));
     }
 }
 step_count++;
