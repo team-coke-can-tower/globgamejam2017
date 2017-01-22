@@ -255,9 +255,9 @@ if(ai_state == "idle") {
         } else {
             // random chance of waiting, running, or fighting
             choice = random(1);
-            if(choice &lt; 0.4) {
+            if(choice &lt; 0.2) {
                 ai_state = "seen-wait";
-            } else if(choice &lt; 0.6) {
+            } else if(choice &lt; 0.4) {
                 ai_state = "seen-run";
             } else {
                 ai_state = "seen-fight";
@@ -316,8 +316,8 @@ if((step_count % 8) == 0) {
     x += hspd;
     y += vspd;
     if(obj_control.engine_on) {
-        x += lengthdir_x(2, 360 - (obj_control.compass_angle + 90));
-        y += lengthdir_y(2, 360 - (obj_control.compass_angle + 90));
+        x += lengthdir_x(2, 180 + (obj_control.compass_angle + 90));
+        y += lengthdir_y(2, 180 + (obj_control.compass_angle + 90));
     }
 }
 step_count++;

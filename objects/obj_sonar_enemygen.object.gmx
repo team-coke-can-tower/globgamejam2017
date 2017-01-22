@@ -61,7 +61,18 @@ if(rand &lt; 0.7) {
 } else if(rand &lt; 0.9) {
     instance_create(pos, 0, obj_enemy_sub_big);
 } else {
-    // TODO: spawn cluster
+    // spawn cluster
+    xpos = pos;
+    ypos = -70;
+    repeat(random_range(3, 5)) {
+        var obj;
+        if(random(1) &lt; 0.7) {
+            obj = obj_enemy_sub_small;
+        } else {
+            obj = obj_enemy_sub_big;
+        }
+        instance_create(xpos + random_range(-70, 70), ypos + random_range(-70, 70), obj_enemy_sub_small);
+    }
 }
 </string>
           </argument>

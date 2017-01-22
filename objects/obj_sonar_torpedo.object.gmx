@@ -31,6 +31,8 @@ image_alpha = 0;
 
 son_ctrl = instance_find(obj_sonar_control, 0);
 
+step_count = 0;
+
 from_player = true;
 target_x = 0;
 target_y = 0;
@@ -125,8 +127,8 @@ direction = point_direction(start_x, start_y, target_x, target_y);
 image_angle = direction;
 
 if(obj_control.engine_on and ((step_count % 4) == 0)) {
-    x += lengthdir_x(2, 360 - (obj_control.compass_angle + 90));
-    y += lengthdir_y(2, 360 - (obj_control.compass_angle + 90));
+    x += lengthdir_x(2, 180 + (obj_control.compass_angle + 90));
+    y += lengthdir_y(2, 180 + (obj_control.compass_angle + 90));
 }
 step_count += 1;
 </string>
@@ -229,6 +231,7 @@ if((room == rm_sonar) and (not son_ctrl.sonar_on)) {
 
 if(from_player) {
     other.hp -= 1;
+    instance_create(x, y, obj_screenshake);
     instance_destroy();
 }
 </string>
@@ -308,6 +311,7 @@ audio_play_sound(snd_sonar_ping_torpedo, 0, false);
 if(not from_player) {
     room_goto(rm_interior);
     hit_player();
+    instance_create(x, y, obj_screenshake);
     instance_destroy();
 }
 </string>
