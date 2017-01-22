@@ -26,6 +26,7 @@
     <sound>sound\snd_ocean_ambient</sound>
     <sound>sound\snd_footsteps_1</sound>
     <sound>sound\snd_explosion</sound>
+    <sound>sound\mus_theme_menu</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="sonar">
