@@ -31,7 +31,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="7">
+    <event eventtype="6" enumb="56">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -94,7 +94,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_control.compass_angle = (obj_control.compass_angle - 20) mod 360
+            <string>var tryAngle = obj_control.compass_angle - 5;
+if(tryAngle &gt; -45){
+    obj_control.compass_angle = tryAngle
+}
 </string>
           </argument>
         </arguments>

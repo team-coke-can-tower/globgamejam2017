@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>action_text = "Press X to enter change the direction of the submarine"
+            <string>action_text = "Click on the arrows to change the direction"
 hitsquare_active = true
 event_inherited();
 </string>
@@ -33,7 +33,7 @@ event_inherited();
         </arguments>
       </action>
     </event>
-    <event eventtype="10" enumb="88">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -60,6 +60,8 @@ else{
     obj_compass_left.visible = false
     obj_compass_right.visible = false
 }
+
+event_inherited();
 </string>
           </argument>
         </arguments>
