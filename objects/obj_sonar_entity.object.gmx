@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// If outside sonar room, not visible
 
-if(room == rm_interior) {
+if(room != rm_sonar) {
     visible = false;
 } else {
     visible = true;
