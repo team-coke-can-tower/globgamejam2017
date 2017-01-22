@@ -137,6 +137,10 @@
       <object>objects\obj_menu_tutorial</object>
       <object>objects\obj_menu_sub_front</object>
     </objects>
+    <objects name="tutorial">
+      <object>objects\obj_tutorial_control</object>
+    </objects>
+    <object>objects\obj_screenshake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
