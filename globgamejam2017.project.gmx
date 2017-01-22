@@ -70,6 +70,7 @@
       <sprite>sprites\spr_menu_title</sprite>
       <sprite>sprites\spr_menu_bubble</sprite>
       <sprite>sprites\spr_menu_sub_back</sprite>
+      <sprite>sprites\spr_menu_next</sprite>
     </sprites>
     <sprites name="losing_winning_pause">
       <sprite>sprites\spr_resume_button</sprite>
@@ -158,6 +159,7 @@
       <object>objects\obj_menu_title</object>
       <object>objects\obj_menu_tutorial</object>
       <object>objects\obj_menu_sub_front</object>
+      <object>objects\obj_menu_next</object>
     </objects>
     <objects name="tutorial">
       <object>objects\obj_tutorial_control</object>

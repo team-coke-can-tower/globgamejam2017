@@ -28,6 +28,7 @@
             <string>/// Set alarm
 
 alarm[0] = 10;
+text_page = 0;
 
 randomize();
 </string>
@@ -86,9 +87,18 @@ draw_set_halign(fa_center);
 
 draw_text(room_width/2, 50, "Tutorial");
 
-draw_text_ext(room_width/2, 125, "You are a Royal Navy undercover officer. In your last mission, you snuck into East Berlin, and stole important USSR files. Return with your submersible craft across the Baltic Sea, and bring back this vital information, officer!", string_height("M") + 10, room_width*2/3);
-
-draw_text_ext(room_width/2, 25+(room_height/2), "Go to the sonar room to check or listen for enemies. Navigate past them via the compass; if you must, use torpedoes to protect the files at all costs. Fix your ship's rooms if shot, and make it north safely!", string_height("M") + 10, room_width*2/3);
+if(text_page == 0) {
+    draw_text_ext(room_width/2, 125, "You are a Royal Navy undercover officer. In your last mission, you snuck into East Berlin, and stole important USSR files. Return with your submersible craft across the Baltic Sea, and bring back this vital information, officer!", string_height("M") + 10, room_width*2/3);
+    draw_text_ext(room_width/2, 25+(room_height/2), "Go to the sonar room to check or listen for enemies. Navigate past them via the compass; if you must, use torpedoes to protect the files at all costs. Fix your ship's rooms if shot, and make it north safely!", string_height("M") + 10, room_width*2/3);
+} else if(text_page == 1) {
+    draw_text_ext(room_width/2, 125, "Use the arrow keys to move around the submarine. Use X to interact when prompted.##Walk to your bed to pause the game.#Walk to the SONAR panel to enter SONAR mode.", string_height("M") + 10, room_width*2/3);
+} else if(text_page == 2) {
+    draw_text_ext(room_width/2, 125, "SONAR MODE#Enemies will show up on screen as GREEN dots. They will turn YELLOW if they spot you and RED if they become hostile.#If an enemy detects you, use the switches to turn off SONAR and turn on the microphone.", string_height("M") + 10, room_width*2/3);
+} else if(text_page == 3) {
+    draw_text_ext(room_width/2, 125, "Listen and wait until the coast is clear.#You may fire back at enemies by switching on the torpedoes and click in the direction to fire.#You can also choose to steer the ship away from enemies (must exit SONAR mode and steer outside).##Enemy attacks may damage the submarine.", string_height("M") + 10, room_width*2/3);
+} else {
+    draw_text_ext(room_width/2, 125, "If you are hit, go to the damaged room and hold X to fix.#If all rooms in the submarine are hit, you will lose.", string_height("M") + 10, room_width*2/3);
+}
 </string>
           </argument>
         </arguments>
