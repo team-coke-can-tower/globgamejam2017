@@ -80,12 +80,9 @@
     <instance objName="obj_panel2" x="498" y="293" name="inst_309A4386" locked="0" code="" scaleX="1" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="599" y="302" name="inst_A532D2D2" locked="0" code="" scaleX="1" scaleY="0.5" colour="4294967295" rotation="180"/>
     <instance objName="obj_box" x="622" y="142" name="inst_72793BE3" locked="0" code="" scaleX="0.400000005960464" scaleY="0.25" colour="4294967295" rotation="180"/>
-    <instance objName="obj_compass_left" x="118" y="10" name="inst_4913D7D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_compass_right" x="547" y="-25" name="inst_41122B8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_compass_left" x="527" y="37" name="inst_4913D7D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="588" y="36" name="inst_41122B8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_compass_left" x="524" y="41" name="inst_4913D7D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_compass_right" x="598" y="40" name="inst_41122B8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_compass" x="575" y="83" name="inst_66E67757" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_compass_right" x="589" y="37" name="inst_95995C96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
