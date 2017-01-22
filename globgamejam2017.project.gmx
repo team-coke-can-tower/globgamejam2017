@@ -35,6 +35,8 @@
       <sprite>sprites\spr_enemy_sub_big</sprite>
       <sprite>sprites\spr_enemy_sub_small</sprite>
       <sprite>sprites\spr_sonar_compass</sprite>
+      <sprite>sprites\spr_sonar_btn</sprite>
+      <sprite>sprites\spr_sonar_cpanel</sprite>
     </sprites>
     <sprites name="interior">
       <sprite>sprites\spr_player</sprite>
@@ -140,6 +142,10 @@
       <object>objects\obj_enemy_sub</object>
       <object>objects\obj_enemy_sub_big</object>
       <object>objects\obj_sonar_compass</object>
+      <object>objects\obj_sonar_engine_btn</object>
+      <object>objects\obj_sonar_mic_btn</object>
+      <object>objects\obj_sonar_torp_btn</object>
+      <object>objects\obj_sonar_cpanel</object>
     </objects>
     <object>objects\obj_emit</object>
     <objects name="menu">

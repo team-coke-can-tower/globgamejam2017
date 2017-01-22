@@ -29,7 +29,7 @@
 
 randomize();
 
-max_num_objs = 2;   // maximum allowed number of things to spawn at a time
+max_num_objs = 4;   // maximum allowed number of things to spawn at a time
 </string>
           </argument>
         </arguments>
