@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Update orientation
 
-image_angle = obj_control.compass_angle + 90;
+image_angle = obj_control.compass_angle;
 </string>
           </argument>
         </arguments>

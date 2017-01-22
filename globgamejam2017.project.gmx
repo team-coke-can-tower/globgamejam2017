@@ -64,6 +64,7 @@
       <sprite>sprites\spr_tutorial_button</sprite>
       <sprite>sprites\spr_menu_title</sprite>
       <sprite>sprites\spr_menu_bubble</sprite>
+      <sprite>sprites\spr_menu_sub_back</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -140,7 +141,6 @@
     <room>rooms\rm_init</room>
     <room>rooms\rm_interior</room>
     <room>rooms\rm_sonar</room>
-    <room>rooms\rm_tutorial</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_tutorial</room>
   </rooms>
