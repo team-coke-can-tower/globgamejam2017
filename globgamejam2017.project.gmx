@@ -24,6 +24,7 @@
       <sound>sound\snd_wepons_rm_alarm</sound>
     </sounds>
     <sound>sound\snd_ocean_ambient</sound>
+    <sound>sound\snd_footsteps_1</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="sonar">
@@ -56,6 +57,7 @@
       <sprite>sprites\spr_compass_right</sprite>
     </sprites>
     <sprite>sprites\spr_blank_rm</sprite>
+    <sprite>sprites\spr_resume_button</sprite>
     <sprite>sprites\spr_blank_action</sprite>
     <sprites name="menu">
       <sprite>sprites\spr_menu_sub_front</sprite>
@@ -141,6 +143,7 @@
       <object>objects\obj_tutorial_control</object>
     </objects>
     <object>objects\obj_screenshake</object>
+    <object>objects\obj_resume_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
@@ -148,6 +151,8 @@
     <room>rooms\rm_sonar</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_tutorial</room>
+    <room>rooms\rm_pause_menu</room>
+    <room>rooms\rm_losing</room>
   </rooms>
   <constants number="3">
     <constant name="HEAL_TIME">60</constant>
