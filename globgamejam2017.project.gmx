@@ -14,6 +14,9 @@
       <sound>sound\snd_sub_big</sound>
       <sound>sound\snd_sub_small</sound>
       <sound>sound\snd_torpedo</sound>
+      <sound>sound\snd_mic_loop</sound>
+      <sound>sound\snd_mic_start</sound>
+      <sound>sound\snd_sonar_start</sound>
     </sounds>
     <sounds name="alarms">
       <sound>sound\snd_control_rm_alarm</sound>
@@ -29,6 +32,7 @@
       <sprite>sprites\spr_sonar_torpedo</sprite>
       <sprite>sprites\spr_enemy_sub_big</sprite>
       <sprite>sprites\spr_enemy_sub_small</sprite>
+      <sprite>sprites\spr_sonar_compass</sprite>
     </sprites>
     <sprites name="interior">
       <sprite>sprites\spr_player</sprite>
@@ -117,6 +121,7 @@
       <object>objects\obj_sonar_entity</object>
       <object>objects\obj_enemy_sub</object>
       <object>objects\obj_enemy_sub_big</object>
+      <object>objects\obj_sonar_compass</object>
     </objects>
     <object>objects\obj_emit</object>
     <objects name="menu">
@@ -137,6 +142,7 @@
     <room>rooms\rm_sonar</room>
     <room>rooms\rm_tutorial</room>
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_tutorial</room>
   </rooms>
   <constants number="3">
     <constant name="HEAL_TIME">60</constant>

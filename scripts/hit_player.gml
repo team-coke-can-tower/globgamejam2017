@@ -12,7 +12,7 @@ if(room_hit == obj_control.control_room && room == rm_sonar){
     room_goto(rm_interior)
 }
 
-audio_play_sound(room_sound[room_hit], 1, true)
+audio_play_sound(obj_control.room_sound[room_hit], 1, true)
 
 obj_control.room_inst[room_hit].hitsquare_active = true;
 

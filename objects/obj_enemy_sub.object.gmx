@@ -55,6 +55,8 @@ if(object_index == obj_enemy_sub_small) {
     hp = 2;
     max_hp = 2;
 }
+
+step_count = 0;
 </string>
           </argument>
         </arguments>
@@ -135,9 +137,9 @@ audio_emitter_free(s_emit);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Die if no health
+            <string>/// Die if no health or below screen
 
-if(hp &lt;= 0) {
+if((hp &lt;= 0) or (y &gt; room_height)) {
     instance_destroy();
     exit;
 }
@@ -314,7 +316,8 @@ if((step_count % 8) == 0) {
     x += hspd;
     y += vspd;
     if(obj_control.engine_on) {
-        y += 2;
+        x += lengthdir_x(2, 360 - obj_control.compass_angle);
+        y += lengthdir_y(2, 360 - obj_control.compass_angle);
     }
 }
 step_count++;
@@ -435,22 +438,6 @@ if(ai_state == "idle") {
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

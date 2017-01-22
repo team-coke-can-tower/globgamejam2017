@@ -52,17 +52,16 @@ max_num_objs = 2;   // maximum allowed number of things to spawn at a time
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Add new submarine
+            <string>/// Add new submarine or submarine cluster
 
-var pos;
-if(random(1) &lt; 0.5)
-    pos = random_range(0, room_width / 3);
-else
-    pos = random_range(room_width * 2 / 3, room_width);
-if(random(1) &lt; 0.9) {
+var pos = random_range(0, room_width);
+var rand = random(1)
+if(rand &lt; 0.7) {
     instance_create(pos, 0, obj_enemy_sub_small);
-} else {
+} else if(rand &lt; 0.9) {
     instance_create(pos, 0, obj_enemy_sub_big);
+} else {
+    // TODO: spawn cluster
 }
 </string>
           </argument>

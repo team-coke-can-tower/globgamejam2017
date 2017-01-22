@@ -123,6 +123,12 @@ audio_emitter_free(s_emit);
 speed = 1;
 direction = point_direction(start_x, start_y, target_x, target_y);
 image_angle = direction;
+
+if(obj_control.engine_on and ((step_count % 4) == 0)) {
+    x += lengthdir_x(2, 360 - obj_control.compass_angle);
+    y += lengthdir_y(2, 360 - obj_control.compass_angle);
+}
+step_count += 1;
 </string>
           </argument>
         </arguments>
