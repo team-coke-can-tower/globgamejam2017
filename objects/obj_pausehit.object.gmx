@@ -52,8 +52,10 @@ event_inherited();
             <kind>1</kind>
             <string>if(on_hitsquare){
     obj_control.is_paused = true
+    instance_deactivate_object(obj_enemy_sub);
+    instance_deactivate_object(obj_sonar_torpedo);
+    instance_deactivate_object(obj_sonar_player);
     instance_deactivate_object(obj_sonar_entity)
-    instance_deactivate_object(obj_sonar_enemygen)
     audio_pause_all()
     room_goto(rm_pause)
 }
